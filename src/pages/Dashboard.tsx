@@ -29,7 +29,7 @@ const Dashboard = () => {
           <div className="relative px-8 py-12 text-white">
             <div className="max-w-2xl">
               <h1 className="text-4xl font-bold mb-4">
-                Welcome back, Sarah! 👋
+                Welcome back, Priya! 👋
               </h1>
               <p className="text-xl opacity-90 mb-6">
                 You have 5 interviews scheduled today and 12 new applications to review.
