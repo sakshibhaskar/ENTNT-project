@@ -1,4 +1,4 @@
-import { Bell, Search, User } from "lucide-react";
+import { Bell, Search, User, Clock, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -39,12 +39,48 @@ export const Header = () => {
         {/* Right Side Actions */}
         <div className="flex items-center gap-4">
           {/* Notifications */}
-          <Button variant="ghost" size="icon" className="relative">
-            <Bell className="h-5 w-5" />
-            <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs bg-destructive">
-              3
-            </Badge>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="relative">
+                <Bell className="h-5 w-5" />
+                <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs bg-destructive">
+                  3
+                </Badge>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-80" align="end">
+              <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="flex items-start gap-3 p-4">
+                <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-sm font-medium">Interview Completed</p>
+                  <p className="text-xs text-muted-foreground">Priya Sharma's technical interview finished successfully</p>
+                  <p className="text-xs text-muted-foreground mt-1">2 hours ago</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex items-start gap-3 p-4">
+                <AlertCircle className="h-4 w-4 text-warning mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-sm font-medium">New Application</p>
+                  <p className="text-xs text-muted-foreground">Arjun Patel applied for Frontend Developer position</p>
+                  <p className="text-xs text-muted-foreground mt-1">4 hours ago</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="flex items-start gap-3 p-4">
+                <Clock className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-sm font-medium">Interview Reminder</p>
+                  <p className="text-xs text-muted-foreground">Kavya Reddy's interview scheduled in 1 hour</p>
+                  <p className="text-xs text-muted-foreground mt-1">1 day ago</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="text-center justify-center">
+                <span className="text-sm text-primary">View All Notifications</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {/* User Menu */}
           <DropdownMenu>
@@ -53,7 +89,7 @@ export const Header = () => {
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="/avatars/user.jpg" alt="User" />
                   <AvatarFallback className="bg-primary text-primary-foreground">
-                    <User className="h-4 w-4" />
+                    RG
                   </AvatarFallback>
                 </Avatar>
               </Button>
@@ -61,9 +97,9 @@ export const Header = () => {
             <DropdownMenuContent className="w-56" align="end" forceMount>
               <DropdownMenuLabel className="font-normal">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">Sarah Johnson</p>
+                  <p className="text-sm font-medium leading-none">Rajesh Gupta</p>
                   <p className="text-xs leading-none text-muted-foreground">
-                    sarah@company.com
+                    rajesh.gupta@company.com
                   </p>
                 </div>
               </DropdownMenuLabel>
