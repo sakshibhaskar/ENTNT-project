@@ -23,75 +23,75 @@ import { format } from "date-fns";
 const mockInterviews = [
   {
     id: "1",
-    candidate: "Sarah Johnson",
+    candidate: "Priya Sharma",
     position: "Senior Frontend Developer",
     type: "Technical Interview",
     date: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
     duration: 60,
     location: "Conference Room A",
     meetingLink: "https://zoom.us/j/123456789",
-    interviewers: ["john.doe@company.com", "jane.smith@company.com"],
+    interviewers: ["rahul.gupta@company.com", "neha.singh@company.com"],
     status: "scheduled" as const,
     notes: "Focus on React and TypeScript skills"
   },
   {
     id: "2",
-    candidate: "Mike Chen",
+    candidate: "Arjun Patel",
     position: "UX Designer",
     type: "Portfolio Review",
     date: new Date(Date.now() + 24 * 60 * 60 * 1000), // tomorrow
     duration: 45,
     location: "Remote",
     meetingLink: "https://meet.google.com/abc-defg-hij",
-    interviewers: ["design.lead@company.com"],
+    interviewers: ["deepika.design@company.com"],
     status: "scheduled" as const,
     notes: "Review portfolio and design thinking process"
   },
   {
     id: "3",
-    candidate: "Emily Davis",
+    candidate: "Kavya Reddy",
     position: "Product Manager",
     type: "Final Round",
     date: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
     duration: 90,
     location: "Conference Room B",
-    interviewers: ["ceo@company.com", "cto@company.com"],
+    interviewers: ["vikram.ceo@company.com", "anita.cto@company.com"],
     status: "completed" as const,
     notes: "Leadership and strategic thinking assessment"
   },
   {
     id: "4",
-    candidate: "Alex Rivera",
+    candidate: "Rohit Verma",
     position: "Backend Engineer",
     type: "Phone Screening",
     date: new Date(Date.now() - 24 * 60 * 60 * 1000), // yesterday
     duration: 30,
     location: "Remote",
-    interviewers: ["hr@company.com"],
+    interviewers: ["sneha.hr@company.com"],
     status: "completed" as const,
     notes: "Initial screening - passed"
   },
   {
     id: "5",
-    candidate: "Jessica Kim",
+    candidate: "Aisha Khan",
     position: "Data Scientist",
     type: "Technical Interview",
     date: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 3 days from now
     duration: 75,
     location: "Lab Room",
-    interviewers: ["data.lead@company.com"],
+    interviewers: ["karan.data@company.com"],
     status: "scheduled" as const,
     notes: "Machine learning and statistics focus"
   },
   {
     id: "6",
-    candidate: "Tom Wilson",
+    candidate: "Siddharth Jain",
     position: "Marketing Specialist",
     type: "Behavioral Interview",
     date: new Date(Date.now() + 60 * 60 * 1000), // 1 hour from now
     duration: 45,
     location: "Conference Room C",
-    interviewers: ["marketing.manager@company.com"],
+    interviewers: ["ritu.marketing@company.com"],
     status: "no_show" as const,
     notes: "Candidate did not attend"
   }
