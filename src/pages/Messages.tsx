@@ -27,9 +27,9 @@ import { format } from "date-fns";
 const mockMessages = [
   {
     id: "1",
-    subject: "Interview Feedback - Sarah Johnson",
-    sender: "John Doe",
-    email: "john.doe@company.com",
+    subject: "Interview Feedback - Priya Sharma",
+    sender: "Rahul Gupta",
+    email: "rahul.gupta@company.com",
     avatar: "",
     preview: "Great technical skills, would recommend moving to final round...",
     date: new Date(Date.now() - 2 * 60 * 60 * 1000),
@@ -41,8 +41,8 @@ const mockMessages = [
   {
     id: "2",
     subject: "New Application - Frontend Developer",
-    sender: "Mike Chen",
-    email: "mike.chen@email.com",
+    sender: "Arjun Patel",
+    email: "arjun.patel@email.com",
     avatar: "",
     preview: "Hi, I'm interested in the Senior Frontend Developer position...",
     date: new Date(Date.now() - 4 * 60 * 60 * 1000),
@@ -54,8 +54,8 @@ const mockMessages = [
   {
     id: "3",
     subject: "Interview Reschedule Request",
-    sender: "Emily Davis",
-    email: "emily.davis@email.com",
+    sender: "Kavya Reddy",
+    email: "kavya.reddy@email.com",
     avatar: "",
     preview: "Could we reschedule our interview for next week? I have a conflict...",
     date: new Date(Date.now() - 24 * 60 * 60 * 1000),
@@ -67,8 +67,8 @@ const mockMessages = [
   {
     id: "4",
     subject: "Offer Acceptance - Product Manager",
-    sender: "Alex Rivera",
-    email: "alex.rivera@email.com",
+    sender: "Rohit Verma",
+    email: "rohit.verma@email.com",
     avatar: "",
     preview: "Thank you for the offer! I'm excited to accept and join the team...",
     date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
@@ -80,8 +80,8 @@ const mockMessages = [
   {
     id: "5",
     subject: "Follow-up on UX Designer Position",
-    sender: "Jessica Kim",
-    email: "jessica.kim@email.com",
+    sender: "Aisha Khan",
+    email: "aisha.khan@email.com",
     avatar: "",
     preview: "I wanted to follow up on my application submitted last week...",
     date: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
@@ -309,7 +309,7 @@ const Messages = () => {
                   {selectedMessage.type === "interview_feedback" && (
                     <div className="space-y-4">
                       <p>
-                        I wanted to share my feedback from the technical interview with Sarah Johnson 
+                        I wanted to share my feedback from the technical interview with Priya Sharma 
                         for the Senior Frontend Developer position.
                       </p>
                       <p><strong>Technical Skills:</strong> Excellent knowledge of React, TypeScript, and modern web development practices.</p>
@@ -330,7 +330,7 @@ const Messages = () => {
                       <p>
                         Please find my resume and portfolio attached. I look forward to hearing from you.
                       </p>
-                      <p>Best regards,<br/>Mike Chen</p>
+                      <p>Best regards,<br/>Arjun Patel</p>
                     </div>
                   )}
                   
@@ -345,7 +345,7 @@ const Messages = () => {
                         As discussed, my start date will be in two weeks. Please let me know if there 
                         are any documents or preparations needed before then.
                       </p>
-                      <p>Best regards,<br/>Alex Rivera</p>
+                      <p>Best regards,<br/>Rohit Verma</p>
                     </div>
                   )}
                 </div>
@@ -357,7 +357,7 @@ const Messages = () => {
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm">
                         <Paperclip className="h-4 w-4" />
-                        <span>resume_mike_chen.pdf</span>
+                        <span>resume_arjun_patel.pdf</span>
                         <Button variant="ghost" size="sm">Download</Button>
                       </div>
                       {selectedMessage.attachments > 1 && (
